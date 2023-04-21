@@ -16,6 +16,7 @@ public class TypeOfArmy {
         this.divisionList = divisionList;
     }
 
+
     public String getNameOfType() {
         return nameOfType;
     }

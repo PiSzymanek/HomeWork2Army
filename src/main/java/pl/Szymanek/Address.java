@@ -1,5 +1,7 @@
 package pl.Szymanek;
 
+import java.util.Objects;
+
 public class Address {
     private String city;
     private String street;
@@ -46,5 +48,28 @@ public class Address {
 
     public void setPostmanCode(String postmanCode) {
         this.postmanCode = postmanCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", buildNumber='" + buildNumber + '\'' +
+                ", postmanCode='" + postmanCode + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Address address = (Address) o;
+        return Objects.equals(city, address.city) && Objects.equals(street, address.street) && Objects.equals(buildNumber, address.buildNumber) && Objects.equals(postmanCode, address.postmanCode);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(city, street, buildNumber, postmanCode);
     }
 }

@@ -1,6 +1,7 @@
 package pl.Szymanek;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Soldier {
     private String firstName;
@@ -76,5 +77,30 @@ public class Soldier {
 
     public void setEquipment(Equipment equipment) {
         this.equipment = equipment;
+    }
+
+    @Override
+    public String toString() {
+        return "Soldier{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthdayDate=" + birthdayDate +
+                ", address=" + address +
+                ", rank=" + rank +
+                ", equipment=" + equipment +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Soldier soldier = (Soldier) o;
+        return Objects.equals(firstName, soldier.firstName) && Objects.equals(lastName, soldier.lastName) && Objects.equals(birthdayDate, soldier.birthdayDate) && Objects.equals(address, soldier.address) && rank == soldier.rank && Objects.equals(equipment, soldier.equipment);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, birthdayDate, address, rank, equipment);
     }
 }
