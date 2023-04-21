@@ -1,5 +1,14 @@
 package pl.Szymanek;
 
 public enum TypeOfDivision {
-    artillery,airCavalry,airDefense,missile,infantry,mountainInfantry,marine,airborne,mechanized,motorized
+    ARTILLERY("artillery"),AIRCAVALRY("airCavalry"),AIRDEFENSE("airDefense"),MISSILE("missile"),INFANTRY("infantry"),MOUNTAININFANTRY("mountainInfantry"),MARINE("marine"),AIRBORNE("airborne"),MECHANIZED("mechanized"),MOTORIZED("motorized");
+    private final String type;
+
+    TypeOfDivision(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
 }

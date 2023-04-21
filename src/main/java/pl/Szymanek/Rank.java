@@ -1,5 +1,15 @@
 package pl.Szymanek;
 
 public enum Rank {
-    OR01,OR02,OR03,OR04,OR05,OR06,OR07,OR08,OR09,OR10,PRESIDENT
+    OR01("0R-01"),OR02("0R-01"),OR03("0R-01"),OR04("0R-01"),OR05("0R-01"),OR06("0R-01"),OR07("0R-01"),OR08("0R-01"),OR09("0R-01"),OR10("0R-01"),PRESIDENT("President"),CIVILIAN("civilian");
+    private final String rank;
+
+    Rank(String rank) {
+        this.rank = rank;
+    }
+
+    public String getRank() {
+        return rank;
+    }
 }
+
