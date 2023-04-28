@@ -1,9 +1,11 @@
-package pl.Szymanek;
+package pl.Szymanek.Classes;
+
+import pl.Szymanek.Enums.TypeOfTank;
 
 import java.util.List;
 import java.util.Objects;
 
-public class Tank extends Vehicle{
+public class Tank extends Vehicle {
     private double caliber;
     private String ammunitionType;
     private TypeOfTank typeOfTank;

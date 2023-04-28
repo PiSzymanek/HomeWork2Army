@@ -1,4 +1,6 @@
-package pl.Szymanek;
+package pl.Szymanek.Classes;
+
+import pl.Szymanek.Enums.Rank;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -77,6 +79,13 @@ public class Soldier {
 
     public void setEquipment(Equipment equipment) {
         this.equipment = equipment;
+    }
+
+
+    public static String MapDoubleToSting(int i){
+        String k=i+"ok";
+        String s=Integer.toString(i);
+        return k;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package pl.Szymanek;
+package pl.Szymanek.Enums;
 
 public enum TypeOfDivision {
     ARTILLERY("artillery"),AIRCAVALRY("airCavalry"),AIRDEFENSE("airDefense"),MISSILE("missile"),INFANTRY("infantry"),MOUNTAININFANTRY("mountainInfantry"),MARINE("marine"),AIRBORNE("airborne"),MECHANIZED("mechanized"),MOTORIZED("motorized");

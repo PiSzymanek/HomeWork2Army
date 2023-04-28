@@ -1,4 +1,4 @@
-package pl.Szymanek;
+package pl.Szymanek.Classes;
 
 import java.util.List;
 import java.util.Objects;

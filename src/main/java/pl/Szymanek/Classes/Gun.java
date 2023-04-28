@@ -1,4 +1,4 @@
-package pl.Szymanek;
+package pl.Szymanek.Classes;
 
 import java.math.BigDecimal;
 import java.util.Objects;

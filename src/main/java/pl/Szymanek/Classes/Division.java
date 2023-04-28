@@ -1,8 +1,12 @@
-package pl.Szymanek;
+package pl.Szymanek.Classes;
+
+import pl.Szymanek.Interfaces.ICount;
+import pl.Szymanek.Enums.TypeOfDivision;
 
 import java.util.List;
+import java.util.Objects;
 
-public class Division {
+public class Division implements ICount {
     private String nameOfDivision;
     private int numberOfDivision;
     private List<Soldier> commanders;
@@ -57,5 +61,40 @@ public class Division {
 
     public void setTypeOfDivision(TypeOfDivision typeOfDivision) {
         this.typeOfDivision = typeOfDivision;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Division{" +
+                "nameOfDivision='" + nameOfDivision + '\'' +
+                ", numberOfDivision=" + numberOfDivision +
+                ", commanders=" + commanders +
+                ", brigade=" + brigade +
+                ", typeOfDivision=" + typeOfDivision +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Division division = (Division) o;
+        return numberOfDivision == division.numberOfDivision && Objects.equals(nameOfDivision, division.nameOfDivision) && Objects.equals(commanders, division.commanders) && Objects.equals(brigade, division.brigade) && typeOfDivision == division.typeOfDivision;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameOfDivision, numberOfDivision, commanders, brigade, typeOfDivision);
+    }
+
+    @Override
+    public int count() {
+        int count = 0;
+        for (Brigade brigade1 : brigade) {
+            count += brigade1.count();
+        }
+        count+=commanders.size();
+        return count;
     }
 }

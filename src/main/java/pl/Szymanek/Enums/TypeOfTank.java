@@ -1,4 +1,4 @@
-package pl.Szymanek;
+package pl.Szymanek.Enums;
 
 public enum TypeOfTank {
     LIGHT("Light"),MEDIUM("Medium"),HEAVY("Heavy");
